@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Gestor_Clinico_Colegio.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title> Principal</title>   
+    <link href="Img/rcm-80x36px.png" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        .footer{
+            width:100%;
+            position:sticky;
+            bottom:0;
+            left:0;
+            text-align:center; 
+            background-color:cornflowerblue;
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="sidebar" runat="server">        
+        <div class="w3-sidebar w3-bar-block w3-blue w3-card w3-animate-left" style="display:none" id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large"onclick="w3_close()">
+              &times;
+          </button>
+          <a href="AgendarAtencion.aspx" class="w3-bar-item w3-button">Ficha medica</a>
+          <a href="VistaMedico.aspx" class="w3-bar-item w3-button">Agenda</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+
+    <!-- Barra de horizontal -->
+    
+    
+        <div id="main">
+
+            <div class="w3-blue w3-xlarge">
+              <button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
+                <img src="Img/rcm-80x36px.png" alt="Imagen RCMSalud" >
+            </div>
+            <asp:ContentPlaceHolder ID="contenido" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class=footer>
+                <p>&copy; all Copyrigth reserved <%: DateTime.Now.Year %> - Mi aplicación ASP.NET By: Juan Uribe </p>
+            </div>
+        
+            
+
+             <script>
+                 function w3_open() {
+                     document.getElementById("main").style.marginLeft = "15%";
+                     document.getElementById("mySidebar").style.width = "15%";
+                     document.getElementById("mySidebar").style.display = "block";
+                     document.getElementById("openNav").style.display = 'none';
+                 }
+                 function w3_close() {
+                     document.getElementById("main").style.marginLeft = "0%";
+                     document.getElementById("mySidebar").style.display = "none";
+                     document.getElementById("openNav").style.display = "inline-block";
+                 }
+             </script>
+        </div>
+    </asp:ContentPlaceHolder>   
+</body>
+</html>
