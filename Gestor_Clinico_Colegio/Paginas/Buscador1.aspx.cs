@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Gestor_Clinico_Colegio.Login
+namespace Gestor_Clinico_Colegio.Paginas
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Buscador1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

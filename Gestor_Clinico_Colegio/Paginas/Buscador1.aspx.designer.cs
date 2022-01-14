@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gestor_Clinico_Colegio.Login
+namespace Gestor_Clinico_Colegio
 {
 
 
-    public partial class Login
+    public partial class FichaPaciente
     {
     }
 }

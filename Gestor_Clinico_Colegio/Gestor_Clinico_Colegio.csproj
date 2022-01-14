@@ -106,17 +106,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Paginas\Buscador.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Paginas\Buscador1.aspx" />
+    <Content Include="Paginas\Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="FichaClinica\Agenda.aspx" />
-    <Content Include="FichaClinica\AgendarAtencion.aspx" />
-    <Content Include="FichaClinica\VistaMedico.aspx" />
+    <Content Include="Paginas\FichaPaciente.aspx" />
+    <Content Include="Paginas\Agenda.aspx" />
+    <Content Include="Paginas\AgendarAtencion.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -127,6 +129,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Inicio.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Img\CIE 10.png" />
     <Content Include="Img\derivacion.png" />
@@ -139,7 +142,6 @@
     <Content Include="Img\receta.png" />
     <Content Include="Img\telemedicina.png" />
     <Content Include="Img\user-icon.png" />
-    <Content Include="Login\Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -184,6 +186,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Paginas\Buscador.aspx.cs">
+      <DependentUpon>Buscador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Buscador.aspx.designer.cs">
+      <DependentUpon>Buscador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,45 +200,59 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="Paginas\Buscador1.aspx.cs">
+      <DependentUpon>Buscador1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Buscador1.aspx.designer.cs">
+      <DependentUpon>Buscador1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Paginas\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FichaClinica\Agenda.aspx.cs">
+    <Compile Include="Inicio.Master.cs">
+      <DependentUpon>Inicio.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.Master.designer.cs">
+      <DependentUpon>Inicio.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\FichaPaciente.aspx.cs">
+      <DependentUpon>FichaPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\FichaPaciente.aspx.designer.cs">
+      <DependentUpon>FichaPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Agenda.aspx.cs">
       <DependentUpon>Agenda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FichaClinica\Agenda.aspx.designer.cs">
+    <Compile Include="Paginas\Agenda.aspx.designer.cs">
       <DependentUpon>Agenda.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FichaClinica\AgendarAtencion.aspx.cs">
+    <Compile Include="Paginas\AgendarAtencion.aspx.cs">
       <DependentUpon>AgendarAtencion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FichaClinica\AgendarAtencion.aspx.designer.cs">
+    <Compile Include="Paginas\AgendarAtencion.aspx.designer.cs">
       <DependentUpon>AgendarAtencion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FichaClinica\VistaMedico.aspx.cs">
-      <DependentUpon>VistaMedico.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FichaClinica\VistaMedico.aspx.designer.cs">
-      <DependentUpon>VistaMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Intranet.Master.cs">
+      <DependentUpon>Intranet.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Intranet.Master.designer.cs">
+      <DependentUpon>Intranet.Master</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +267,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -253,13 +283,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Agenda\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Intranet.Master" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

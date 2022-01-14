@@ -11,7 +11,7 @@ namespace Gestor_Clinico_Colegio
 {
 
 
-    public partial class _Default
+    public partial class FichaPaciente
     {
     }
 }
