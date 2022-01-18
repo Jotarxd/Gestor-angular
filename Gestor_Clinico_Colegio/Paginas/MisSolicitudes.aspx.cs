@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Gestor_Clinico_Colegio
+namespace Gestor_Clinico_Colegio.Paginas
 {
-    public partial class FichaPaciente : System.Web.UI.Page
+    public partial class MisSolicitudes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

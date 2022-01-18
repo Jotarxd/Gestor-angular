@@ -13,7 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    
+        <link href="../Img/rcm-80x36px.png" rel="shortcut icon" type="image-icon" />
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="bodycontent" runat="server">
@@ -81,7 +82,7 @@
                         <h4 style="margin-left:1%;margin-top:1%">Datos De Contacto</h4>
 
                         <div class="col-sm-4 col-md-4 col-lg-4">
-                            <label>Telefono: </label><br />+<input name="+" id="Txt_cod" type="number" style="width:45px" /><input id="Txt_tel" title="numero" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" type="tel" style="width:75%;margin-left:1%" /><br />
+                            <label>Telefono: </label><br />+<input id="Txt_cod" type="number" style="width:50px" /><input id="Txt_tel" title="numero" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" type="tel" style="width:75%;margin-left:1%" /><br />
                         </div>
 
                         <div class="col-sm-4 col-md-4 col-lg-4">
@@ -187,8 +188,8 @@
 
                                     <!-- Modal footer -->
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Guardar</button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                                     </div>
 
                                 </div>
@@ -199,16 +200,16 @@
                 
                 <center>
                     <div class="row" style="white-space:nowrap">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <input type="submit" Value="Guardar" class="btn-primary" style="border-radius:5px"/>
+                        <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
+                            <input type="submit" Value="Guardar" class="btn-primary" style="border-radius:5px;height:30px"" />
                        
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"> Ficha  </button>
+                            <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="height:30px;border-radius:5px">Ficha</button>
                         
-                            <input type="submit" Value="Pagar" class="btn-primary" style="background-color:gray;border-radius:5px;border-color:gray"/>
+                            <input type="submit" Value="Pagar" class="btn-primary" style="height:30px;background-color:gray;border-radius:5px;border-color:gray"/>
                        
-                            <input type="submit" Value="Volver" class="btn-primary" style="background-color:gray;border-radius:5px;border-color:gray"/>
+                            <input type="submit" Value="Volver" class="btn-primary" style="height:30px;background-color:gray;border-radius:5px;border-color:gray"/>
                         
-                            <input type="submit" Value="Eliminar" class="btn-danger" style="border-radius:5px"/>
+                            <input type="submit" Value="Eliminar" class="btn-danger" style="border-radius:5px;height:30px "/>
                         </div>
                     </div>
                 </center>

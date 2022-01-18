@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Gestor_Clinico_Colegio.Paginas
 {
-    public partial class Buscador1 : System.Web.UI.Page
+    public partial class CompraBono : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

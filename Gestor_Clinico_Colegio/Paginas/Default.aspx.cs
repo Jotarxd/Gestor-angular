@@ -14,9 +14,9 @@ namespace Gestor_Clinico_Colegio
 
         }
         
-        protected void Login1_Authenticate1(object sender, AuthenticateEventArgs e)
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
-            Response.Redirect("Agenda.aspx");
+            Response.Redirect("~../Buscador.aspx");
         }
     }
 }
