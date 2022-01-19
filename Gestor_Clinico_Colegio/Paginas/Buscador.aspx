@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="buscador" Language="C#" MasterPageFile="~/Inicio.master" AutoEventWireup="true" CodeBehind="Buscador.aspx.cs" Inherits="Gestor_Clinico_Colegio.FichaPaciente" %>
 
 
-
 <asp:Content  ContentPlaceHolderID="titulo" runat="server">
     Buscador
 </asp:Content>
@@ -20,96 +19,94 @@
 
 <asp:Content  ContentPlaceHolderID="bodycontent" runat="server">
 
-    <div class="container-fluid" style="margin:1%">
-        
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                      
-                    <h5>Prestador</h5>                   
-                    <div>
-                        <select name="prestador" class="form-select">
-                            <option selected >Seleccione</option>
-                        </select>
-                    </div>
-                       <center>
-                        <div class="lign-center mt-2">
-                            <div class="form-check form-check-inline" (change)="cambiaVer($event.target.value)">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rdDia" value="1" checked>
-                                <label class="form-check-label" for="rdDia">Ver día</label>
-                            </div>
+<style>
+      
+           body {
+                    counter-reset: rows;
+               }
+            
+            table tbody tr {
+              counter-increment: rows;
+            }
+             table .total:before {
+                content: counter(rows);
+             }
 
-                            <div class="form-check form-check-inline" (change)="cambiaVer($event.target.value)">
+        
+</style>
+
+
+
+ <div class="container-fluid">
+     <div class="container">    
+     
+    <div class="row" style="margin-top:5px;margin-bottom:25px">
+        
+        <div class=" col-lg-3 col-md-8 col-sm-12 " style="margin-right=2px;margin-left=2px">                      
+                    <br /><h5>Email</h5>                   
+                    <input type="text" style="width:235px"/>
+            <br />
+                    <h5>WhatsApp</h5>
+                   +<input name="+" id="Txt_cod" style="width:25px" />
+                   <input id="Txt_tel" title="numero" pattern="" type="tel" style="width:auto;margin-left:1%" /><br />                                               
+               </div>  
+ 
+           
+         <div class="col-lg-5 col-md-4 col-sm-12 "  style="margin-right=5px;margin-left=5px">                                
+                   <br /> <div class="form-check form-check-inline" (change)="cambiaVer($event.target.value)">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rdDia" value="1" checked>
+                                <label class="form-check-label" for="rdDia">Ver día  </label>
+                    </div>
+                    <div class="form-check form-check-inline" (change)="cambiaVer($event.target.value)">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rdSemana" value="2">
                                 <label class="form-check-label" for="rdSemana">Ver Semana</label>
-                            </div>
-                        </div>
-                    </center>
-
-                    <div class="container">     
+                    </div><br /><br />
+                      
+                      
                         <label >Inicio:</label>
-                        <input type="date" (change)="cambiaFecha($event.target)" [formControl]="fecha1" style="width:130px"/>
+                        <input type="date" (change)="cambiaFecha($event.target)" [formControl]="fecha1" style="width:130px"/>&nbsp;&nbsp;&nbsp;
                         <label >Termino:</label>
                         <input type="date" (change)="cambiaFecha($event.target)" [formControl]="fecha2" style="width:130px"/>
-                        <hr />
-                        <label >Hora Inicio:</label>
-                        <input type="time" id="hrinicio" style="width:130px" />
+                        <br /><br />
+                         <label >Hora Inicio:</label>
+                        <input type="time" id="hrinicio" style="width:100px" />&nbsp;&nbsp;&nbsp;
                         <label >Hora Fin:</label>
-                        <input type="time" id="hrtermino" style="width:130px" />
-                       
-                    </div>
-                </div>
-                    
+                        <input type="time" id="hrtermino" style="width:100px" />
+           </div>
+        
+           <div class="col-lg-3 col-md-8 col-sm-12"  style="margin-right=5px;margin-left=5px">
 
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    
-                    <h5>Profesional</h5>
-
-                    <select name="profesionales" class="form-select" (change)="cambiaProfesional($event.target.value)">
-                        <option selected >Seleccione Profesional</option>
-                    </select>
-
-                    <center>
-                        <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
-                            <button class="btn btn-primary" (click)=buscarCita() type="submit">Buscar Cita</button>
-                        </div>
-                    </center>
-                </div>
-    
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <div class="d-flex justify-content-center bd-highlight mb-2">
-                        <div class="btn-group">
-                            <input type="radio" class="btn-check" formcontrolname="tipoDoc" value="1" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary btn-block">RUT</label>
-                            <input type="radio" class="btn-check" formcontrolname="tipoDoc" value="2" autocomplete="off">
-                            <label class="btn btn-outline-primary btn-block">OTRO DOCUMENTO</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <center >
+                       <br /> <div class="radio">
+                            <input type="radio" class="btn-check" formcontrolname="tipoDoc" value="1" autocomplete="on" >
+                            <label class="btn btn-outline-primary ">RUT</label>
+                            <input type="radio" class="btn-check" formcontrolname="tipoDoc" value="2" autocomplete="on">
+                            <label class="btn btn-outline-primary ">OTRO DOCUMENTO</label>
+                        </div><br />
                          <div class="radio" >
                             <label><input type="radio" name="optradio" value="rafonasa" >  Fonasa  </label>&nbsp;&nbsp;&nbsp;
                             <label><input type="radio" name="optradio" value="raotro" > Otro</label>
-                        </div>
-                            </center>
-                       
-                        <input type="text" />
-
-                    
-
-                    <center>
-                        <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
-                            <!-- Button to Open the Modal Preagendamiento -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Enviar</button>
-                        </div>  
-                    </center>
-                </div>
+                         </div>
+                                <input type="text" /><br />
+                            
+ <!-- Button to Open the Modal Preagendamiento --> 
+              <br /> <button type="button" class="btn btn-secondary btn-align-center" data-bs-toggle="modal" data-bs-target="#myModal">Enviar</button>
+                         
+                  </div><br />  
+            
+            
+            <div class="col-lg-1 col-md-4 col-sm-12 " style="margin-right=5px;margin-left=5px">
+                <br /><button class="button button1"; (click)=buscarCita() type="submit"> Agregar Prestacion</button>
             </div>
-    </div>
+         </div>
+         </div>
+     </div>
+        
+    
+
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="col-lg-4 col-md-4 col-sm-12">
                 
                 <div class="card" style="padding:1px">
                     <div class="card-header">
@@ -163,24 +160,109 @@
 
             </div>
        
-            <div class="col-lg-8 col-md-8">
+            <div class="col-lg-8 col-md-8 col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <div id="raconsulta" style="display">
-                                 <h1>Calendario Consulta</h1>
-                        </div>
+                        <div  class="col-md-12 col-sm-12 col-lg-12" id="raconsulta" >
+                                 <table class="w3-table">
+                                    <thead>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>hora inicio</th>
+                                        <th>Hora Fin</th>
+                                        <th>Prestacion</th>
+                                        <th>Especialidad</th>
+                                        <th>Comuna</th>
+                                        <th>Seleccion</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                     <tr>
+                                        <td>20-01-2022</td>
+                                        <td>11:00</td>
+                                        <td>15:00</td>
+                                        <td>Consulta</td>
+                                        <td>Broncopulmonar</td>
+                                        <td>Renca</td>
+                                        <td><input class="w3-check" type="checkbox" checked="checked"></td>
+                                   </tr>
+                                     
+                                    <tr>
+                                        <td>18-01-2022</td>
+                                        <td>18:00</td>
+                                        <td>19:00</td>
+                                        <td>Consulta</td>
+                                        <td>Obstetra</td>
+                                        <td>San Bernardo</td>
+                                        <td><input class="w3-check" type="checkbox" checked="checked" ></td>
+                                             </tr>
+                                         </tbody>
+                                          
+                                        <tfoot>
+                                            <tr>
+                                                <th>Total de servicios registrados: <span class="total"> </span></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                            </div>
+
+                         
+                        
 
                         <div id="ratelemedicina"style="display:none">
-                                 <h1>Calendario Telemedicina</h1>
+                                 <table class="w3-table">
+                                    <thead>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>hora inicio</th>
+                                        <th>Hora Fin</th>
+                                        <th>Prestacion</th>
+                                        <th>Especialidad</th>
+                                        <th>Comuna</th>
+                                        <th>Seleccion</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                     <tr>
+                                        <td>18-03-2022</td>
+                                        <td>08:00</td>
+                                        <td>10:00</td>
+                                        <td>Telemedicina</td>
+                                        <td>Cardiologo</td>
+                                        <td>Estacion Central</td>
+                                        <td><input class="w3-check" type="checkbox" checked="checked"></td>
+                                   </tr>
+                                     
+                                    <tr>
+                                        <td>27-03-2022</td>
+                                        <td>12:00</td>
+                                        <td>15:00</td>
+                                        <td>Telemedicina</td>
+                                        <td>Pediatra</td>
+                                        <td>La Florida</td>
+                                        <td><input class="w3-check" type="checkbox" checked="checked" ></td>
+                                             </tr>
+                                         </tbody>
+                                          
+                                        <tfoot>
+                                            <tr>
+                                                <th>Total de servicios registrados: <span class="total"> </span></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                         </div>
 
 
                         <div id="raimagen" style="display:none">
-                            <h1>vista imagen</h1> 
+                            <h1>volvi mundo</h1> 
                         </div>
 
                         <div id="ralaboratorio" style="display:none">
-                            <h1> Ficha Laboratorio</h1>
+                            <h1> me vuelvo a ir mundo</h1>
                         </div>
                     </div>
                 </div>
@@ -188,6 +270,9 @@
 
         </div>
    </div>
+    </div>
+
+    
                  <script>
                      $(document).ready(function () {
                          $("input[type=radio]").click(function (event) {
@@ -209,23 +294,23 @@
                                  $("#raimagen").show();
                                  $("#ralaboratorio").hide();
                              }
-                             if (valor == "ralaboratorio") {
+                              if (valor == "ralaboratorio") {
                                  $("#raconsulta").hide();
                                  $("#ratelemedicina").hide();
                                  $("#raimagen").hide();
                                  $("#ralaboratorio").show();
-                             } else if (valor == "raconsulta") {
-                                 $("#raconsulta").show();
-                                 $("#ratelemedicina").hide();
-                                 $("#raimagen").hide();
-                                 $("#ralaboratorio").hide();
-                             }
-
+                              } else if (valor == "raconsulta") {
+                                  $("#raconsulta").show();
+                                  $("#ratelemedicina").hide();
+                                  $("#raimagen").hide();
+                                  $("#ralaboratorio").hide();
+                              }                                
+                 
                          });
                      });
                  </script> 
     
-   </div>
+   
     <!--MODAL PREAGENDAMIENTO PARA CONSULTA Y TELEMEDICINA-->
 
     <div class="modal" data-backdrop="static" data-keyboard="false" id="myModal">
@@ -315,5 +400,5 @@
             </div>
         </div>
     </div>
-
+     
 </asp:Content>

@@ -226,3 +226,7 @@ C:\Users\Rcm\Documents\GitHub\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Ge
 C:\Users\Rcm\Documents\GitHub\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.csproj.CopyComplete
 C:\Users\Rcm\Documents\GitHub\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.dll
 C:\Users\Rcm\Documents\GitHub\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.pdb
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.dll
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.pdb

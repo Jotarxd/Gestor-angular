@@ -6,34 +6,67 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="Img/rcm-80x36px.png" rel="shortcut icon" type="image/x-icon" />
     <title> 
         <asp:ContentPlaceHolder ID="titulo" runat="server">
+
         </asp:ContentPlaceHolder>
     </title> 
-    
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
     <style>
-        .footer{
-            width:100%;
-            position:sticky;
-            bottom:0;
-            left:0;
-            text-align:center; 
-            background-color:cornflowerblue;
-            overflow:auto;
-        }
-    </style>
+            .footer{
+                width:100%;
+                position:sticky;
+                bottom:0;
+                left:0;
+                text-align:center; 
+                background-color:cornflowerblue;
+                overflow:auto;
+            }
+            hr {
+                  height: 1px;
+                  border-color: white;
+                }
+            .button1 {
+                                  display: inline-block;
+                                  padding: 5px 15px;
+                                  font-size: 20px;
+                                  cursor: pointer;
+                                  text-align: center;
+                                  text-decoration: none;
+                                  outline: none;
+                                  color: #fff;
+                                  background-color: #4CAF50;
+                                  border: none;
+                                  border-radius: 15px;
+                                  box-shadow: 0 9px #999;
+                                }
+
+                                .button:hover {background-color: #3e8e41}
+
+                                .button:active {
+                                  background-color: #3e8e41;
+                                  box-shadow: 0 5px #666;
+                                  transform: translateY(4px);
+                                }
+
+                        }
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
 </head>
 <body>
 
     <div id="main">
+        <a href="Paginas/Agenda.aspx"></a>
         <div class="w3-blue w3-xlarge"> 
-            <a href="~/Paginas/Default.aspx" runat="server" class="w3-button w3-blue " >Login</a>
-            <img runat="server" src="~/Img/rcm-80x36px.png" alt="Imagen RCMSalud" >
+            <a href="../Paginas/Login.aspx" class="w3-button w3-blue " >Login</a>
+            <img src="~/Img/rcm-80x36px.png" alt="Imagen RCMSalud" runat="server" >
         </div>
+
         <asp:ContentPlaceHolder ID="bodycontent" runat="server"> 
+
         </asp:ContentPlaceHolder>
 
         <div class=footer> 

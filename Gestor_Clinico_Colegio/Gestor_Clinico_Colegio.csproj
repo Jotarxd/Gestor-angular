@@ -112,13 +112,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Img\PlusIcon.png" />
+    <Content Include="Img\rcm_clinico_logo %281%29.png" />
     <Content Include="Paginas\Buscador.aspx" />
-    <Content Include="Paginas\CompraBono.aspx" />
-    <Content Include="Paginas\Default.aspx" />
+    <Content Include="Paginas\Login.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Paginas\FichaPaciente.aspx" />
     <Content Include="Paginas\Agenda.aspx" />
+    <Content Include="Paginas\AgendarAtencion.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -130,7 +130,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Inicio.Master" />
-    <Content Include="bu-de- CIE-10.xls" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Img\CIE 10.png" />
     <Content Include="Img\derivacion.png" />
@@ -143,9 +142,7 @@
     <Content Include="Img\receta.png" />
     <Content Include="Img\telemedicina.png" />
     <Content Include="Img\user-icon.png" />
-    <Content Include="Paginas\Login.aspx" />
-    <Content Include="Paginas\MisSolicitudes.aspx" />
-    <Content Include="Paginas\WebForm1.aspx" />
+    <Content Include="Paginas\CompraBono.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -204,19 +201,12 @@
     <Compile Include="Paginas\Buscador.aspx.designer.cs">
       <DependentUpon>Buscador.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\CompraBono.aspx.cs">
-      <DependentUpon>CompraBono.aspx</DependentUpon>
+    <Compile Include="Paginas\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\CompraBono.aspx.designer.cs">
-      <DependentUpon>CompraBono.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Paginas\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.Master.cs">
       <DependentUpon>Inicio.Master</DependentUpon>
@@ -239,29 +229,22 @@
     <Compile Include="Paginas\Agenda.aspx.designer.cs">
       <DependentUpon>Agenda.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\AgendarAtencion.aspx.cs">
+      <DependentUpon>AgendarAtencion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\AgendarAtencion.aspx.designer.cs">
+      <DependentUpon>AgendarAtencion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Paginas\CompraBono.aspx.cs">
+      <DependentUpon>CompraBono.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\MisSolicitudes.aspx.cs">
-      <DependentUpon>MisSolicitudes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\MisSolicitudes.aspx.designer.cs">
-      <DependentUpon>MisSolicitudes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Paginas\CompraBono.aspx.designer.cs">
+      <DependentUpon>CompraBono.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Intranet.Master.cs">
@@ -285,13 +268,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,7 +284,6 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Intranet.Master" />
-    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
