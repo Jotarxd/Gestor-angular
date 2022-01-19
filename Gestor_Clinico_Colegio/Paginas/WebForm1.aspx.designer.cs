@@ -7,11 +7,16 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gestor_Clinico_Colegio.FichaClinica
-{
 
 
-    public partial class AgendarAtencion
-    {
-    }
+public partial class  {
+
+    /// <summary>
+    /// Control form1.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 }
