@@ -82,7 +82,7 @@
                         <h4 style="margin-left:1%;margin-top:1%">Datos De Contacto</h4>
 
                         <div class="col-sm-4 col-md-4 col-lg-4">
-                            <label>Telefono: </label><br />+<input id="Txt_cod" type="number" style="width:50px" /><input id="Txt_tel" title="numero" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" type="tel" style="width:75%;margin-left:1%" /><br />
+                            <label>Telefono: </label><br /><input id="Txt_cod" type="number" style="width:10%" /><input id="Txt_tel" title="numero" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" type="tel" style="width:80%;margin-left:1%" /><br />
                         </div>
 
                         <div class="col-sm-4 col-md-4 col-lg-4">
@@ -207,7 +207,7 @@
                         
                             <input type="submit" Value="Pagar" class="btn-primary" style="height:30px;background-color:gray;border-radius:5px;border-color:gray"/>
                        
-                            <input type="submit" Value="Volver" class="btn-primary" style="height:30px;background-color:gray;border-radius:5px;border-color:gray"/>
+                            <button type="button" class="btn-primary" style="height:30px;background-color:gray;border-radius:5px;border-color:gray">Volver</button>
                         
                             <input type="submit" Value="Eliminar" class="btn-danger" style="border-radius:5px;height:30px "/>
                         </div>

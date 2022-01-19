@@ -4,18 +4,18 @@
 <head runat="server">
     
     
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
 
-        <link href="Img/rcm-80x36px.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="Img/rcm-80x36px.png" rel="shortcut icon" type="image/x-icon" />
         
     <title>
         <asp:ContentPlaceHolder ID="titulo" runat="server">
-            
         </asp:ContentPlaceHolder>
-    </title>  
+    </title> 
+    
     <style>
         body{
             top:100%;
@@ -27,8 +27,26 @@
             top:100%;
             left:0;
             text-align:center; 
-            background-color:cornflowerblue;
+            background-color:#007BFF;
             overflow:auto;
+        }
+        .button{
+            color:black;
+            background-color:white;
+            text-decoration:none;
+            text-align: center;
+            text-justify:distribute;
+        }
+        .button:hover{
+            background-color:#007BFF; /* Green */
+            border: none;
+            color:black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
         }
     </style>
 
@@ -37,45 +55,34 @@
 </head>
 <body>        
     
-         
-        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;background-color:cornflowerblue" id="mySidebar">
-              <button class="w3-bar-item w3-button w3-large"onclick="w3_close()">
-                  &times;
-              </button>
-              <a href="Buscador.aspx" class="w3-bar-item w3-button">Buscador</a> 
-              <a href="MisSolicitudes.aspx" class="w3-bar-item w3-button">Mis Solicitudes</a>
-              <a href="Agenda.aspx" class="w3-bar-item w3-button">Agenda</a>
-              <a href="FichaPaciente.aspx" class="w3-bar-item w3-button">Ficha</a>
-              <a href="Default.aspx" class="w3-bar-item w3-button">Salir</a>
-            
-        </div>
+    <div class="w3-sidebar w3-bar-block w3-animate-left " style="display:none;background-color:transparent" id="mySidebar">
+        <button class="w3-bar-item w3-large w3-button"onclick="w3_close()" style="background-color:transparent">
+            Cerrar &times;
+        </button>
+        <a href="Buscador.aspx" class="w3-bar-item button">Buscador</a> 
+        <a href="MisSolicitudes.aspx" class="w3-bar-item button" >Mis Solicitudes</a>
+        <a href="Agenda.aspx" class="w3-bar-item button">Agenda</a>
+        <a href="FichaPaciente.aspx" class="w3-bar-item  button">Ficha</a>
+        <a href="Default.aspx" class="w3-bar-item w3-red button">Salir</a>        
+    </div>
 
     <!-- Barra de horizontal -->
     
-    
-    
-        <div id="main">
+    <div id="main">
 
-            <div class="w3-xlarge" style="background-color:cornflowerblue">
-              <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()" style="background-color:cornflowerblue" >&#9776;</button>
-                <img src="~/Img/rcm-80x36px.png" runat="server" alt="Imagen RCMSalud" >
-            </div>
-
-            
-           
-
-
-            <asp:ContentPlaceHolder ID="bodycontent" runat="server"> 
-                
-             
-            </asp:ContentPlaceHolder>
-            <div class=footer> 
-                <p>&copy; Copyrigth: RCM-Salud</p>
-            </div>
-       
-            
+        <div class="w3-xlarge" style="background-color:#007BFF;">
+            <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()" style="background-color:#007BFF;" >&#9776;</button>
+            <img src="~/Img/rcm-80x36px.png" style="height:43px" runat="server" alt="Imagen RCMSalud" >
         </div>
-        
+
+        <asp:ContentPlaceHolder ID="bodycontent" runat="server"> 
+        </asp:ContentPlaceHolder>
+
+        <div class=footer> 
+            <p>&copy; Copyrigth: RCM-Salud</p>
+        </div>
+
+    </div>        
         
 </body>
 </html>

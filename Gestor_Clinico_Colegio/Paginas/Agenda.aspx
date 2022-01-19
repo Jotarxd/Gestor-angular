@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="Ficha" Language="C#" MasterPageFile="~/Intranet.Master" AutoEventWireup="true" CodeBehind="Agenda.aspx.cs" Inherits="Gestor_Clinico_Colegio.FichaPaciente" %>
 
-
 <asp:Content ContentPlaceHolderID="titulo" runat="server">
     Agenda
 </asp:Content>
-
 
 <asp:Content ContentPlaceHolderID="head" runat="server" ID="contenido" >
 
@@ -35,10 +33,6 @@
     </script>
 
     <style>
-        body{
-            left:100%;
-            right:100%;
-        }
         .leftagenda {
           position:absolute;
           padding: 5px;
@@ -100,22 +94,13 @@
                 width: 130px;
             }
         }
-        .footer{
-            width:100%;
-            position:sticky;
-            bottom:0;
-            left:0;
-            text-align:center; 
-            background-color:cornflowerblue;
-            overflow:auto;
-        }
         #item{
             background-color:transparent;
             border:hidden;
             margin:10px;
         }
         #item:hover{
-            background-color:dodgerblue;
+            background-color:#007BFF;
             border-radius: 5px;
             cursor:pointer;
         }
@@ -125,7 +110,7 @@
             margin:10px;
         }
         #revisado:hover{
-            background-color:green;
+            background-color:mediumseagreen;
             border-radius: 5px;
             cursor:pointer;
         }
@@ -134,7 +119,7 @@
         }
     </style>
 
-  <div style="margin-top:1%"> 
+    <div style="margin-top:1%;"> 
             <header style="margin-left:1%" >Agenda</header>
 
             <div class="leftagenda" style="margin-top:30px;overflow-y:scroll;overflow-x:hidden">
@@ -170,7 +155,7 @@
                 
             </div>
 
-             <header class="leftrevisado">Pacientes Listos</header>
+            <header class="leftrevisado">Pacientes Listos</header>
             <div class="leftrevisado" disabled="true" style="margin-top:30px;overflow-y:scroll;overflow-x:hidden">
                
                 <button id="revisado" style="width:300px;height:75px" onclick="">
@@ -198,7 +183,6 @@
                     {{Nombre.Paciente}}+{{Apellido.Paciente}}<br />{{Hora.Atencion}}
                 </button>
             </div>
-
 
         </div>       
 
@@ -293,4 +277,5 @@
                 </div>
             </div>
         </div>
+
 </asp:Content>
