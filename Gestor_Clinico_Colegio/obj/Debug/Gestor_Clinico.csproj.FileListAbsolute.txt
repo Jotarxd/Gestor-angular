@@ -1,0 +1,4 @@
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.dll
+C:\Users\Usuario\Desktop\Gestor Angular\Gestor-angular\Gestor_Clinico_Colegio\obj\Debug\Gestor_Clinico_Colegio.pdb

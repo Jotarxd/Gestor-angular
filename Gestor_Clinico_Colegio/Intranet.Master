@@ -41,7 +41,7 @@
               <a href="Buscador.aspx" class="w3-bar-item w3-button">Buscador</a> 
               <a href="Agenda.aspx" class="w3-bar-item w3-button">Agenda</a>
               <a href="FichaPaciente.aspx" class="w3-bar-item w3-button">Ficha</a>
-              <a href="Default.aspx" class="w3-bar-item w3-button">Salir</a>
+              <a href="Buscador.aspx" class="w3-bar-item w3-button">Salir</a>
             
         </div>
 
@@ -53,7 +53,7 @@
 
             <div class="w3-blue w3-xlarge">
               <button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()" >&#9776;</button>
-                <img src="Img/rcm-80x36px.png" alt="Imagen RCMSalud" >
+                <img src="~/Img/rcm-80x36px.png" alt="Imagen RCMSalud" runat="server" >
             </div>
 
             

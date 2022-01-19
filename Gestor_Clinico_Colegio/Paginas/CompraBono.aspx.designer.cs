@@ -7,11 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gestor_Clinico_Colegio
-{
 
 
-    public partial class FichaPaciente
-    {
-    }
+public partial class  {
 }

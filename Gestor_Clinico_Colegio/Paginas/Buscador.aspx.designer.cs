@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gestor_Clinico
+namespace Gestor_Clinico_Colegio
 {
 
 
-    public partial class WebForm1
+    public partial class FichaPaciente
     {
     }
 }

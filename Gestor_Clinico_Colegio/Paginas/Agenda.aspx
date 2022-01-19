@@ -20,7 +20,7 @@
 <asp:Content ContentPlaceHolderID="bodycontent" runat="server">
     
     <script>
-         function w3_open() {
+        function w3_open() {
              document.getElementById("main").style.marginLeft = "15%";
              document.getElementById("mySidebar").style.width = "15%";
              document.getElementById("mySidebar").style.display = "block";

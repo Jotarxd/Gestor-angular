@@ -106,15 +106,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Paginas\Buscador.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Paginas\Buscador1.aspx" />
-    <Content Include="Paginas\Default.aspx" />
+    <Content Include="Img\rcm_clinico_logo %281%29.png" />
+    <Content Include="Paginas\Buscador.aspx" />
+    <Content Include="Paginas\Login.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Paginas\FichaPaciente.aspx" />
     <Content Include="Paginas\Agenda.aspx" />
@@ -142,6 +142,7 @@
     <Content Include="Img\receta.png" />
     <Content Include="Img\telemedicina.png" />
     <Content Include="Img\user-icon.png" />
+    <Content Include="Paginas\CompraBono.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -186,13 +187,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Paginas\Buscador.aspx.cs">
-      <DependentUpon>Buscador.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\Buscador.aspx.designer.cs">
-      <DependentUpon>Buscador.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,19 +194,19 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Buscador1.aspx.cs">
-      <DependentUpon>Buscador1.aspx</DependentUpon>
+    <Compile Include="Paginas\Buscador.aspx.cs">
+      <DependentUpon>Buscador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Buscador1.aspx.designer.cs">
-      <DependentUpon>Buscador1.aspx</DependentUpon>
+    <Compile Include="Paginas\Buscador.aspx.designer.cs">
+      <DependentUpon>Buscador.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Paginas\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Paginas\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.Master.cs">
       <DependentUpon>Inicio.Master</DependentUpon>
@@ -245,6 +239,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\CompraBono.aspx.cs">
+      <DependentUpon>CompraBono.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CompraBono.aspx.designer.cs">
+      <DependentUpon>CompraBono.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Intranet.Master.cs">
       <DependentUpon>Intranet.Master</DependentUpon>
@@ -267,13 +268,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -290,7 +284,6 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Intranet.Master" />
-    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

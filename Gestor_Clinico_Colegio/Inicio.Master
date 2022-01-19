@@ -23,6 +23,34 @@
                 background-color:cornflowerblue;
                 overflow:auto;
             }
+            hr {
+                  height: 1px;
+                  border-color: white;
+                }
+            .button1 {
+                                  display: inline-block;
+                                  padding: 5px 15px;
+                                  font-size: 20px;
+                                  cursor: pointer;
+                                  text-align: center;
+                                  text-decoration: none;
+                                  outline: none;
+                                  color: #fff;
+                                  background-color: #4CAF50;
+                                  border: none;
+                                  border-radius: 15px;
+                                  box-shadow: 0 9px #999;
+                                }
+
+                                .button:hover {background-color: #3e8e41}
+
+                                .button:active {
+                                  background-color: #3e8e41;
+                                  box-shadow: 0 5px #666;
+                                  transform: translateY(4px);
+                                }
+
+                        }
         </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
 
@@ -31,10 +59,10 @@
 <body>
 
     <div id="main">
-
+        <a href="Paginas/Agenda.aspx"></a>
         <div class="w3-blue w3-xlarge"> 
-            <a href="Default.aspx" class="w3-button w3-blue " >Login</a>
-            <img src="Img/rcm-80x36px.png" alt="Imagen RCMSalud" >
+            <a href="../Paginas/Login.aspx" class="w3-button w3-blue " >Login</a>
+            <img src="~/Img/rcm-80x36px.png" alt="Imagen RCMSalud" runat="server" >
         </div>
 
         <asp:ContentPlaceHolder ID="bodycontent" runat="server"> 

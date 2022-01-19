@@ -38,7 +38,8 @@
         <div id="main">
 
             <div class="w3-blue w3-xlarge">
-               <img src="Img/rcm-80x36px.png" alt="Imagen RCMSalud" >
+                <a href="../Paginas/Buscador.aspx" class="w3-button w3-blue " >Inicio</a>
+               <img src="~/Img/rcm-80x36px.png" alt="Imagen RCMSalud" runat="server" >
             </div>
 
             <asp:ContentPlaceHolder ID="bodycontent" runat="server"> 
@@ -51,6 +52,6 @@
             </div>
 
         </div>
-
+  
 </body>
 </html>
